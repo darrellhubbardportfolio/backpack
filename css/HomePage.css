@@ -1,0 +1,379 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    position: relative;
+}
+
+#shop-by-product-categories {
+    width: 100%;
+    height: 425px;
+    max-height: 425px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    position: relative;
+}
+
+#shop-by-product-categories> h1 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-transform: uppercase;
+    font-size: 28px;
+    /* font-weight: bolder; */
+}
+
+.categories {
+    width: 100%;
+    max-width: 90%;
+    max-height: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid gray; */
+}
+
+.category-item {
+    max-width: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.category-item>:nth-child(1) {
+    max-width: 125px;
+    max-height: 125px;
+    min-width: 125px;
+    min-height: 125px;
+    border-radius: 100%;
+    background-color: silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #545454;
+    transition: 0.08s ease-in;
+}
+
+.category-item>:nth-child(1)> img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    transition: 0.08s ease-out;
+    background-color: #545454;
+}
+
+.category-item>:nth-child(1):hover {
+    background-blend-mode: overlay;
+    transition: 0.16s ease-in;
+}
+
+.category-item>:nth-child(1):hover >img {
+    transform: scale(1.25);
+    cursor: pointer;
+    background-blend-mode: overlay;
+    transition: 0.16s ease-in;
+}
+
+.category-item>:nth-child(2) {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.category-item>:nth-child(2)>:nth-child(1) {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.category-item>:nth-child(2)>:nth-child(2) {
+    font-weight: normal;
+    color: gray;
+}
+
+#shop-by-discount-categories {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discount-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 325px 325px 200px;
+    grid-template-areas: 
+    "one three"
+    "two three"
+    "four four"
+    ;
+    grid-gap: 45px;
+    width: 100%;
+    height: 100%;
+    max-width: 90%;
+}
+
+.discount-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url("./../assets/wiser-by-the-mile-3o-X8WJOP5E-unsplash.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.category-details {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    max-width: 80%;
+}
+
+.category-details>:nth-child(1) {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.category-details>:nth-child(2) {
+    font-size: 60px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.category-details>:nth-child(3) {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 4px 0;
+}
+
+.discount-categories>:nth-child(1) {
+    grid-area: one;
+    background-position: 100% 100px;
+}
+
+.discount-categories>:nth-child(2) {
+    grid-area: two;
+    background-color: cornflowerblue;
+    background-position: 50% 125px;
+}
+
+.discount-categories>:nth-child(3) {
+    grid-area: three;
+    background-color: goldenrod;
+    color: white;
+}
+
+.discount-categories>:nth-child(4) {
+    grid-area: four;
+    background-color: rgb(250, 154, 154);
+    background-position: 120% 60%;
+    background-size: 525px 800px;
+}
+
+.discount-categories>:nth-child(3)> .category-details> a {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#our-best-sellers {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-sellers {
+    padding: 0;
+    width: 90%;
+    height: 600px;
+    display: flex;
+    flex-flow: wrap;
+    gap: 45px;
+}
+
+.product-label {
+    width: 300px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.product-label> h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.product-label> a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    border-bottom: 1px solid gray;
+}
+.product {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(2, 45px);
+    width: 300px;
+    height: 525px;
+    max-height: 525px;
+    /* border: 1px solid black; */
+}
+
+.product>:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: cornflowerblue;
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(60deg, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(60deg, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.product>:nth-child(1)> img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.product>:nth-child(2) {
+    font-size: 16px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.product>:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product>:nth-child(3)>:nth-child(2) {
+    color: gray;
+}
+
+.product>:nth-child(1)> button {
+    background-color: white;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    transition: 0.32s ease-out;
+    text-transform: uppercase;
+    transform: translateY(85px);
+}
+
+.product>:nth-child(1)> button:hover {
+    background-color: crimson;
+    color: white;
+    transition: 0.16s ease-in;
+    cursor: pointer;
+}
+
+.product>:nth-child(1)> ul {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 16px;
+    background-color: transparent;
+    position: absolute;
+    right: 4px;
+    bottom: 20px;
+    z-index: 0;
+    width: 45px;
+    max-width: 45px;
+    max-height: 45px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.product>:nth-child(1)> ul> .material-symbols-outlined {
+    font-size: 28px;
+    color: white;
+    width: 100%;
+    min-height: 45px;
+    max-height: 45px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 100%;
+    transition: 0.32s linear;
+}
+
+/*
+ taking care of the hovering over the image section will help the button arise to its top position and expand the list of user definid buttons
+
+ */
+.product>:nth-child(1):hover {
+    transition: 0.32s linear;
+    cursor: pointer;
+}
+
+.product>:nth-child(1):hover> ul {
+    transition: 0.16s linear;
+    transform: translateY(-85px);
+    max-height: fit-content;
+}
+
+.product>:nth-child(1):hover> ul> .material-symbols-outlined {
+    background-color: white;
+    color: #343a40;
+    transition: 0.16s linear;
+}
+
+.product>:nth-child(1):hover > button {
+    transform: translateY(0);
+    transition: 0.16s linear;
+}

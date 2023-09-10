@@ -1,0 +1,25 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*
+    write all animations here 
+    */
+
+@keyframes hover {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 50vh;
+    }
+    to {
+        bottom: 0;
+    }
+}
