@@ -15,7 +15,7 @@ header> .headline {
     max-width: 60%;
     position: absolute;
     left: 100px;
-    z-index: 1;
+    /* z-index: 1; */
     display: flex;
     align-items: start;
     justify-content: center;
@@ -67,7 +67,8 @@ header> img {
     position: absolute;
     right: 0;
     animation-name: hover;
-    animation-duration: 1s;
-    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-direction: alternate;
     animation-iteration-count: infinite;
+    
 }

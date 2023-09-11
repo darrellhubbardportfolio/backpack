@@ -2,23 +2,70 @@ nav {
     width: 100vw;
     height: 100px;
     display: grid;
-    grid-template-columns: 0 100px 1fr 200px;
+    grid-template-columns: 100px 1fr 200px;
     grid-template-rows: 1fr;
     padding: 0;
-    position: absolute;
+    position: relative;
     z-index: 1;
-    background-color: transparent;
+    background-color: rgb(235, 235, 235);
     color: #545454;
 }
 
-nav>:nth-child(1) {
+#navlinks {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 60px;
     padding: 0;
+    background-color: white;
+    color: #343a40;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 400px;
+    height: 100vh;
+    padding: 0;
+    transform: translateX(-125%);
+    transition: 0.3s ease-out;
 }
 
-nav>:nth-child(2) {
+.navlink {
+    text-decoration: none;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #343a40;
+    width: 100%;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: 0.16s ease-out;
+    padding: 4px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.navlink:hover {
+    transition: 0.08s ease-in;
+    cursor: pointer;
+    color: gray;
+}
+
+#close-menu {
+    width: 100%;
+    max-width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 28px;
+    color: gray;
+}
+
+nav>:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,18 +73,18 @@ nav>:nth-child(2) {
     cursor: pointer;
 }
 
-nav>:nth-child(3) {
+nav>:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-nav>:nth-child(3)> span {
+nav>:nth-child(2)> span {
     font-size: 60px;
     font-weight: 800;
 }
 
-nav>:nth-child(4) {
+nav>:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +94,7 @@ nav>:nth-child(4) {
     position: relative;
 }
 
-nav>:nth-child(4)>:nth-child(1) {
+nav>:nth-child(3)>:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,8 +109,9 @@ nav>:nth-child(4)>:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
+    width: 50px;
     height: 100%;
+    position: relative;
 }
 
 .favorites>:nth-child(1), .shopping-cart>:nth-child(1) {

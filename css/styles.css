@@ -14,12 +14,11 @@ body {
 
 @keyframes hover {
     from {
-        bottom: 0;
+        /* bottom: 0; */
+        object-position: 50% 40%;
     }
     to {
-        bottom: 50vh;
-    }
-    to {
-        bottom: 0;
+        /* bottom: 100px; */
+        object-position: center;
     }
 }
